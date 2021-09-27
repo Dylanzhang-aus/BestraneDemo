@@ -5,4 +5,21 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Funtions\" />
+    <None Remove="ManagerCenter\" />
+    <None Remove="SqlConnection" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Funtions\" />
+    <Folder Include="ManagerCenter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SqlConnection" Version="1.0.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
 </Project>
