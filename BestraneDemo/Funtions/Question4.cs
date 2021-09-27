@@ -5,11 +5,28 @@ namespace BestraneDemo.Funtions
 {
     public class Question4
     {
-        public static int method(List<int> order)
+        public int Method(List<int> AList)
         {
+            int result = 0;
 
+            List<int> NList = new();
 
-            return 1;
+            for(int i = 1; i <=100000; i++)
+            {
+                NList.Add(i);
+            }
+
+            foreach(var number in NList)
+            {
+                if (!AList.Contains(number))
+                {
+                    result = number;
+                    break;
+                }
+            }
+
+            //if no found, return 0 as result.
+            return result;
         }
     }
 }
